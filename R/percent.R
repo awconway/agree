@@ -9,5 +9,5 @@
 percent <- function(data){
   suppressMessages(library(agree))
  a <-  irr::agree(data)
- paste(a$value, "%", sep = "")
+ paste(round(a$value,0), "%", sep = "")
 }

@@ -8,5 +8,5 @@
 #' @export
 percent <- function(data){
  a <-  irr::agree(agree::data)
- a$value
+ paste(a$value, "%", sep = "")
 }

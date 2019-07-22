@@ -8,9 +8,6 @@
 #' @export
 weightedKappa <- function(data){
   a <-  psych::cohen.kappa(table(agree::data))
-  a$weighted.kappa
+  paste("Weighted Kappa", round(a$weighted.kappa, 2), sep=" = ")
 }
-
-
-
 

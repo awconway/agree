@@ -7,7 +7,8 @@
 
 #' @export
 weightedKappa <- function(data){
-  a <-  psych::cohen.kappa(table(agree::data))
+  suppressMessages(library(agree))
+  options(warn=-1)
+  a <-  psych::cohen.kappa(table(data))
   paste("Weighted Kappa", round(a$weighted.kappa, 2), sep=" = ")
 }
-
